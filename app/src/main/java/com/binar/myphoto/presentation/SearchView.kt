@@ -45,7 +45,7 @@ fun SearchView(textValue: MutableState<TextFieldValue>, navController: NavHostCo
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
         keyboardActions = KeyboardActions(onSearch = {
             if (textValue.value.text != ""){
-                Log.d("search",textValue.value.text.toString())
+                Log.d("search",textValue.value.text)
                 viewModel.getSearch(textValue.value.text)
                 navController.navigate("search_screen/${textValue.value.text}")
             }
